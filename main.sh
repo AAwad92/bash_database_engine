@@ -5,6 +5,7 @@ select choice in New_Database Create_Table Insert_into_Table Update_Table Delete
 do
   case $choice in
     New_Database)  echo "New_Database"
+    . ./create_database.sh
     ;;
     Create_Table)  echo "Create_Table"
     ;;
@@ -13,9 +14,9 @@ do
     Update_Table)   echo "Update_Table"
     ;;
     Exit)
-    echo "Bye Bye"
-    exit 0
+      echo "Bye Bye"
+      exit 0
     ;;
-    *);;
+    *) echo "Undefiend Option Please Select Num [ 1-6 ] !! ";;
   esac
 done
